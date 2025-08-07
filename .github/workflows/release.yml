@@ -191,7 +191,7 @@ jobs:
         draft: false
         prerelease: ${{ contains(steps.release_info.outputs.version, 'Preview') || contains(steps.release_info.outputs.version, 'Beta') || contains(steps.release_info.outputs.version, 'RC') }}
         files: |
-          TimeNest_${{ steps.release_info.outputs.version }}_${{ steps.release_info.outputs.architecture }}.exe.zip
+          TimeNest__.exe.zip
 
     - name: Upload Build Artifacts (for non-release builds)
       if: github.ref_name != 'main' && github.ref_type != 'tag'
